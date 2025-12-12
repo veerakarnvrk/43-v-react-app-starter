@@ -1,0 +1,16 @@
+.header-container {
+  padding: 10px 40px;
+}
+.header-links {
+  text-align: right;
+  margin-bottom: 10px;
+}
+.header-link {
+  margin-left: 20px;
+  text-decoration: none; /* ลบขีดเส้นใต้ */
+  color: black;
+  font-weight: bold;
+}
+.header-divider {
+  border-bottom: 1px solid #ccc;
+}

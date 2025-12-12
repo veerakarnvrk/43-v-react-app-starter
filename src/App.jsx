@@ -1,20 +1,36 @@
-export default function App() {
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+import UserHomeView from './components/UserHomeView';
+import AdminHomeView from './components/AdminHomeView';
+import Owner from './components/Owner';
+
+const App = () => {
+  <Routes>
+  <Route path="/owner" element={<Owner />} /> 
+  </Routes>
+
   return (
-    <div className="min-h-screen flex justify-center bg-blue-950">
-      <div className="p-6 gap-y-6 flex flex-col justify-start w-[80%] lg:w-[70%]">
-        <h1 className="w-full p-6 bg-amber-100 font-extrabold">
-          React App Starter
-        </h1>
-        <section className="w-full p-5 bg-amber-100 flex">
-          <ul className="list-inside list-disc flex-1">
-            <span className="font-semibold">Tech Stack:</span>
-            <li>Vite</li>
-            <li>React</li>
-            <li>JavaScript</li>
-            <li>Tailwind</li>
-          </ul>
-        </section>
+    // Router ห่อหุ้มทุกส่วนที่ต้องการใช้การนำทาง
+    <Router>
+      <div className="app-container">
+        <Header />
+        {/* Routes ใช้กำหนดเส้นทางต่างๆ */}
+        <Routes>
+          {/* Path "/" คือหน้าแรก จะแสดง HomePage */}
+          <Route path="/" element={<HomePage />} />
+          {/* Path "/user" จะแสดง UserHomeView */}
+          <Route path="/user" element={<UserHomeView />} />
+          {/* Path "/admin" จะแสดง AdminHomeView */}
+          <Route path="/admin" element={<AdminHomeView />} />
+          {/* Path "/owner" สำหรับลิงก์ Owner ด้านบนขวา */}
+          <Route path="owner" element={<Owner />} />
+          {/* คุณสามารถเพิ่ม Route สำหรับ 404 Not Found ได้ */}
+        </Routes>
       </div>
-    </div>
+    </Router>
   );
-}
+};
+
+export default App;

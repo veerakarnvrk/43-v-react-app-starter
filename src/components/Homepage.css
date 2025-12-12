@@ -1,0 +1,31 @@
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+  justify-content: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  height: 80vh; /* ทำให้ Container สูงเกือบเต็มจอ */
+  text-align: center;
+}
+.main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.button-group {
+  display: flex;
+  gap: 50px; /* ระยะห่างระหว่างปุ่ม */
+}
+.home-button {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+  transition: background-color 0.2s;
+}
+.home-button:hover {
+  background-color: #f0f0f0;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css'; // ต้องสร้างไฟล์ CSS สำหรับจัดรูปแบบ
+import './HomePage.css';
 
 const HomePage = () => {
   return (

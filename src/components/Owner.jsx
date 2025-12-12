@@ -1,5 +1,5 @@
 import React from 'react';
-import './Owner.css'; // สำหรับจัดรูปแบบ
+import './Owner.css';
 
 const Owner = () => {
   return (
